@@ -1,0 +1,7 @@
+ Sudo: required
+ Services:
+    -docker
+ before-install:
+    -decker build -t akli1512/docker-react -f Dockerfile.dev
+ Script:
+    -docker run akli1512/docker-react nnpm run test -- -- covrege
